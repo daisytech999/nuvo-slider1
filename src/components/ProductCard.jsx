@@ -1,6 +1,4 @@
 function ProductCard({ product }) {
-  const stars = Math.round(product.rating?.rate || 0);
-
   return (
     <div className="card">
       <h3>${product.price}</h3>
