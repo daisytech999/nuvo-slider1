@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ececec;
+}
+
+/* App wrapper */
+.app {
+  background: #ececec;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.subheading {
+  color: #444;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+}
+
+/* Slider wrapper */
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Product list */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Each row */
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  min-width: 280px;
+}
+
+/* Product item (image + text) */
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.product-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.product-item span {
+  font-weight: bold;
+}
+
+/* Chevron button */
+.chevron {
+  margin-left: auto;
+  width: 50px;           /* bigger circle */
+  height: 50px;          /* bigger circle */
+  border-radius: 50%;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;       /* bigger arrow */
+  font-weight: bold;
+  cursor: pointer;
+  color: gray;
+  background: white;
+  transition: transform 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              background 0.3s ease;
+}
+
+/* Active (clicked) state */
+.chevron.active {
+  transform: rotate(180deg);
+  background: #2ca0b3;   /* filled background */
+  color: white;          /* arrow turns white */
+  border-color: #2ca0b3; /* border same as background */
+}
+
+/* Product details card */
+.product-details {
+  background: white;
+  padding: 20px;
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.product-details h3 {
+  margin: 0 0 10px;
+  color: #007c91;
+}
+
+.product-details p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.rating {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.rating .stars {
+  color: gold;   
+}
+
+.rating .count {
+  color: black;  
+  font-size: 16px;
+}
+
+.btn {
+  background: #2ca0b3;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #007c91;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .product-row {
+    min-width: auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product-details {
+    width: 90%;
+  }
+}
