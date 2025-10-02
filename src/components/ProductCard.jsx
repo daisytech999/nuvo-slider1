@@ -1,3 +1,8 @@
+// ProductCard component shows details for the active product:
+// - Price
+// - Description
+// - Rating stars + number of reviews
+// - "Add to Cart" button (non-functional for this test)
 function ProductCard({ product }) {
   return (
     <div className="card">

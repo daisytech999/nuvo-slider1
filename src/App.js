@@ -1,4 +1,5 @@
-import React from "react";
+// App is the root component for the project.
+// It displays the heading, description, and mounts the Slider component.
 import Slider from "./components/Slider";
 import "./styles/main.scss";
 

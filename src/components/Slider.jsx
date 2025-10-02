@@ -1,3 +1,9 @@
+// Slider component is responsible for:
+// - Fetching products from the API
+// - Displaying the product list with clickable rows
+// - Showing an arrow button for each product (circle chevron)
+// - Displaying details of the selected product
+
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import ChevronButton from "./ChevronButton";
@@ -17,7 +23,7 @@ useEffect(() => {
 }, []);
 
 
-
+ // Handler: when user clicks a product or its arrow, set it active
   const handleSelect = (index) => {
     setActiveIndex(index);
   };

@@ -68,33 +68,36 @@ body {
   font-weight: bold;
 }
 
-/* Chevron button */
+/* Chevron button (circle arrow) */
 .chevron {
   margin-left: auto;
-  width: 50px;           /* bigger circle */
-  height: 50px;          /* bigger circle */
+  width: 50px;          
+  height: 50px;         
+  min-width: 50px;      
+  min-height: 50px;     
+  flex-shrink: 0;       
   border-radius: 50%;
   border: 2px solid gray;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;       /* bigger arrow */
+  font-size: 26px;      
   font-weight: bold;
   cursor: pointer;
   color: gray;
   background: white;
-  transition: transform 0.3s ease, 
-              color 0.3s ease, 
+  transition: transform 0.3s ease,
+              color 0.3s ease,
               border-color 0.3s ease,
               background 0.3s ease;
 }
 
-/* Active (clicked) state */
+/* Active arrow (clicked product) */
 .chevron.active {
   transform: rotate(180deg);
-  background: #2ca0b3;   /* filled background */
-  color: white;          /* arrow turns white */
-  border-color: #2ca0b3; /* border same as background */
+  background: #2ca0b3;   
+  color: white;          
+  border-color: #2ca0b3;
 }
 
 /* Product details card */
@@ -117,20 +120,22 @@ body {
   margin-bottom: 15px;
 }
 
+/* Ratings: stars yellow, number black */
 .rating {
   margin-bottom: 15px;
   font-size: 18px;
 }
 
 .rating .stars {
-  color: gold;   
+  color: gold;
 }
 
 .rating .count {
-  color: black;  
+  color: black;
   font-size: 16px;
 }
 
+/* Add to cart button */
 .btn {
   background: #2ca0b3;
   border: none;
@@ -156,7 +161,15 @@ body {
   .product-row {
     min-width: auto;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between; 
+  }
+
+  .chevron {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 24px;
   }
 
   .product-details {
